@@ -1,0 +1,17 @@
+{
+  "hints": {
+    "detect-css-reflows/paint": "off",
+    "detect-css-reflows/composite": "off",
+    "detect-css-reflows/layout": "off"
+  },
+  "extends": [
+    "development"
+  ],
+  "browserslist": [
+    "defaults",
+    "not ie 11",
+    "not ios_saf <= 14.4",
+    "not and_ff <= 110",
+    "not firefox <= 111"
+  ]
+}

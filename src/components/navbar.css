@@ -1,0 +1,152 @@
+nav {
+  height: 7rem;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.952);
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+}
+
+.nav_toggle-btn {
+  display: none;
+}
+
+.nav_container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  width: 8rem;
+  display: block;
+}
+
+.nav_links {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.nav_links a {
+  transition: var(--transition);
+}
+
+.nav_links a:hover {
+  color: var(--color-secondary);
+}
+
+.active-nav {
+  color: var(--color-secondary);
+}
+
+
+
+/* MEDIA QUERIES (MD AND SM SCREENS*/
+
+@media screen and (max-width: 980px) {
+  .nav_toggle-btn {
+    display: inline-block;
+    background: transparent;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .nav_toggle-btn svg {
+    color: rgba(204, 195, 195, 0.774);
+  }
+
+  .nav_links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    perspective: 600px;
+  }
+
+  .nav_links li {
+    height: 4rem;
+    width: 100%;
+    box-shadow: -2rem 2rem 4rem rgba(0, 0, 0, 0.712);
+    border-radius: 0.5rem;
+    animation: navAnimation 700ms ease forwards;
+    transform: rotateX(90deg);
+    opacity: 0;
+    transform-origin: top;
+    
+  }
+
+  .nav_links li:nth-child(2) {
+    animation-delay: 200ms;
+  }
+
+   .nav_links li:nth-child(3) {
+    animation-delay: 400ms;
+  }
+
+   .nav_links li:nth-child(4) {
+    animation-delay: 600ms;
+  }
+
+   .nav_links li:nth-child(5) {
+    animation-delay: 800ms;
+  }
+
+  .nav_links li:nth-child(6) {
+    animation-delay: 1s;
+  }
+
+  .nav_links li:nth-child(7) {
+    animation-delay: 1.2s;
+  }
+
+  @keyframes navAnimation {
+    to {
+      transform: rotateX(0);
+      opacity: 1;
+    }
+  }
+
+  .nav_links{
+    margin-right: -2rem;
+  }
+  
+  .nav_links li a {
+    background: rgba(112, 107, 107, 0.788);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem 5rem 1rem 3rem;
+    border-radius: 0.5rem;
+  }
+
+  .nav_links li a:hover {
+    background: rgba(7, 6, 6, 0.034);
+  }
+
+  .show_nav {
+    display: flex;
+  }
+
+  .hide_nav {
+    display: none;
+  }
+}
+
+/* MEDIA QUERIES (small screen )*/
+
+@media screen and (max-width: 600px) {
+  .nav_container {
+    padding: 0 2rem;
+  }
+
+}
+
+ 

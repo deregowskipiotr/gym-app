@@ -1,0 +1,33 @@
+.gallery_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+
+
+/* MEDIA QUERIES (md screens )*/
+
+@media screen and (max-width: 980px) {
+  .gallery_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 98%;
+    margin-bottom: -3rem;
+    margin-top: 3rem;
+  }
+
+}
+
+/* MEDIA QUERIES (md screens )*/
+
+@media screen and (max-width: 600px) {
+  .gallery_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    display: 1rem;
+    padding: 0 0.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+}

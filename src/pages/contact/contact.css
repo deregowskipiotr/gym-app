@@ -1,0 +1,30 @@
+.contact_container {
+  display: grid;
+  place-items: center;
+}
+
+.contact_wrapper {
+  width: fit-content;
+  display: flex;
+  gap: 4rem;
+  margin-top: 4rem;
+}
+
+.contact_wrapper a {
+  margin-top: 2rem;
+  color: rgba(0, 0, 0, 0.952);
+  font-size: 3rem;
+  transition: var(--transition);
+}
+
+.contact_wrapper a:hover {
+  color: var(--color-secondary);
+  transform: scale(1.4);
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 600px) {
+  .contact_wrapper a {
+    font-size: 2rem;
+  }
+}
